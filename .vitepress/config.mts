@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/website/',
+
   title: "HITSZ 合唱团",
   description: "哈尔滨工业大学（深圳）合唱团 — 排练、曲谱与资源平台",
   lang: 'zh-CN',
