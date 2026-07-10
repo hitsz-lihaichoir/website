@@ -1,104 +1,73 @@
----
-aside: false
----
-
 # 🎵 荔海 (团歌)
 
-<div class="score-workspace">
-  <div class="pdf-section">
-    <iframe src="/website/pdfs/荔海.pdf#view=FitPage" class="pdf-viewer" title="曲谱预览"></iframe>
-  </div>
+> 💡 **排练提示**：这首歌是我们的团歌，整体情感需要饱满。排练时请注意 B 段的声部进入时机。请点击下方下载曲谱与对应声部的音频。
 
-  <div class="audio-section">
-    <h3>🎧 伴奏与声部</h3>
-    
-    <div class="audio-track">
-      <span class="track-label">男低音 (Bass)</span>
-      <audio controls src="/website/audio/荔海-B.mp3"></audio>
-    </div>
-  </div>
+<div class="hoa-table-wrapper">
+  <table class="hoa-table">
+    <thead>
+      <tr>
+        <th>📁 文件名</th>
+        <th>格式</th>
+        <th>大小</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>荔海_完整曲谱</td>
+        <td>PDF</td>
+        <td>-</td>
+        <td><a href="/website/pdfs/荔海.pdf" download class="hoa-dl">📥 点击下载</a></td>
+      </tr>
+      <tr>
+        <td>荔海_男低音轨 (Bass)</td>
+        <td>MP3</td>
+        <td>-</td>
+        <td><a href="/website/audio/荔海-B.mp3" download class="hoa-dl">📥 点击下载</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <style>
-/* --- 核心修复 1：打破 VitePress 默认的窄版阅读模式，强行撑宽页面 --- */
-.VPDoc {
-  width: 100% !important;
-  max-width: 100% !important;
+.hoa-table-wrapper {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
-.VPDoc .container {
-  max-width: 95% !important; 
-}
-.vp-doc {
-  max-width: 100% !important;
-}
-
-/* --- 核心修复 2：UI 布局排版 --- */
-.score-workspace {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.pdf-section {
-  flex: 7;
-  height: 80vh;
-  min-height: 600px;
-}
-
-.pdf-viewer {
+.hoa-table {
   width: 100%;
-  height: 100%;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  margin: 0 !important;
 }
-
-.audio-section {
-  flex: 3;
-  background-color: #f8fafc;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.hoa-table th, .hoa-table td {
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
 }
-
-.audio-section h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 8px;
-}
-
-.audio-track {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.track-label {
+.hoa-table th {
+  background-color: var(--vp-c-bg-soft);
   font-weight: 600;
-  font-size: 0.9rem;
-  color: #334155;
+  color: var(--vp-c-text-2);
 }
-
-.audio-track audio {
-  width: 100%;
-  height: 36px; 
+.hoa-table tr:last-child td {
+  border-bottom: none;
 }
-
-@media (max-width: 900px) {
-  .score-workspace {
-    flex-direction: column;
-  }
-  .pdf-section {
-    width: 100%;
-    height: 60vh;
-  }
-  .audio-section {
-    width: 100%;
-  }
+.hoa-table tr:hover {
+  background-color: var(--vp-c-bg-mute);
+}
+.hoa-dl {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.hoa-dl:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 </style>

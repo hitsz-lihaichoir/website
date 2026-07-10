@@ -16,15 +16,14 @@ export default defineConfig({
       { text: '🏛️ 乐团架构', link: '/about/' }
     ],
 
-    // 侧边栏：帮你把曲谱库按声部或风格分类
+    // 侧边栏：直接列出曲目名称
     sidebar: {
       '/music/': [
         {
-          text: '曲谱分类',
+          text: '🎶 曲谱资源库',
           items: [
-            { text: '混声合唱 (SATB)', link: '/music/satb' },
-            { text: '男声合唱 (TTBB)', link: '/music/ttbb' },
-            { text: '女声合唱 (SSAA)', link: '/music/ssaa' }
+            { text: '荔海 (团歌)', link: '/music/lihai' }
+            // 以后添加新歌，直接在这里加一行，例如：{ text: '茉莉花', link: '/music/molihua' }
           ]
         }
       ],
