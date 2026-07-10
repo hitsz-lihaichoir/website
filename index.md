@@ -1,30 +1,23 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "HITSZ 合唱团"
+  name: "荔海合唱团"
   text: "哈尔滨工业大学（深圳）"
-  tagline: 以歌会友 · 以声传情
-  image:
-    src: /logo.svg
-    alt: HITSZ 合唱团
+  tagline: "以歌会友 · 以声传情 | 内部曲谱与排练资源共享平台"
   actions:
     - theme: brand
-      text: 进入曲谱库
-      link: /music/
+      text: 📥 进入曲谱库
+      link: /music/lihai
     - theme: alt
-      text: 排练日程
-      link: /schedule/
+      text: 📢 近期活动通知
+      link: /events/
 
 features:
-  - icon: 🎵
-    title: 纯净看谱
-    details: 支持 PDF 在线预览，自适应屏幕尺寸，排练时随时随地查阅曲谱
-  - icon: 🎧
-    title: 多声部练习
-    details: 独立控制女高、女低、男高、男低各声部音量，高效分声部练习
-  - icon: 📅
-    title: 排练管理
-    details: 清晰的排练日程安排，不再错过每一次和声的共鸣
+  - title: 📥 极速资源下载
+    details: 告别卡顿的在线预览，一键下载高清完整版 PDF 曲谱，随时随地导入平板中的 Notability 或 Goodnotes 进行标记排练。
+  - title: 🎧 分轨排练音频
+    details: 提供 S、A、T、B 各声部独立的排练 MP3 示范音轨下载，戴上耳机，随时随地进行针对性视唱练习。
+  - title: 🏛️ 极简纯粹
+    details: 专为合唱排练场景打造的极简界面，无冗余跳转，直达下载，让每一次排练准备都高效无阻。
 ---
