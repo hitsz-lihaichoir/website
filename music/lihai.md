@@ -1,3 +1,7 @@
+---
+aside: false
+---
+
 # 🎵 荔海 (团歌)
 
 <div class="score-workspace">
@@ -7,7 +11,7 @@
 
   <div class="audio-section">
     <h3>🎧 伴奏与声部</h3>
-
+    
     <div class="audio-track">
       <span class="track-label">男低音 (Bass)</span>
       <audio controls src="/website/audio/荔海-B.mp3"></audio>
@@ -16,6 +20,19 @@
 </div>
 
 <style>
+/* --- 核心修复 1：打破 VitePress 默认的窄版阅读模式，强行撑宽页面 --- */
+.VPDoc {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.VPDoc .container {
+  max-width: 95% !important; 
+}
+.vp-doc {
+  max-width: 100% !important;
+}
+
+/* --- 核心修复 2：UI 布局排版 --- */
 .score-workspace {
   display: flex;
   gap: 24px;
@@ -34,7 +51,7 @@
   height: 100%;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .audio-section {
