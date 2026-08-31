@@ -7,6 +7,16 @@ const errorMessage = ref('')
 
 const downloadName = computed(() => `${fileTitle.value}.pdf`)
 
+const shouldOpenPdfAsTopLevelDocument = () => {
+  const userAgent = window.navigator.userAgent
+  const isMobileBrowser = /Android|iPhone|iPad|iPod|Mobile/i.test(userAgent)
+  const isTouchFirstDevice =
+    window.navigator.maxTouchPoints > 1 &&
+    window.matchMedia('(pointer: coarse)').matches
+
+  return isMobileBrowser || isTouchFirstDevice
+}
+
 onMounted(() => {
   try {
     const requestedFile = new URLSearchParams(window.location.search).get('file')
@@ -27,13 +37,22 @@ onMounted(() => {
 
     fileUrl.search = ''
     fileUrl.hash = ''
-    filePath.value = fileUrl.pathname
     fileTitle.value =
       decodeURIComponent(fileUrl.pathname.split('/').pop() || '').replace(
         /\.pdf$/i,
         '',
       ) || '曲谱预览'
     document.title = `${fileTitle.value} - 荔海合唱团`
+
+    // Many mobile browsers either lack an embedded PDF viewer or render only
+    // a non-scrollable first-page snapshot. Opening the PDF as the top-level
+    // document lets the browser use its complete native PDF handling instead.
+    if (shouldOpenPdfAsTopLevelDocument()) {
+      window.location.replace(fileUrl.href)
+      return
+    }
+
+    filePath.value = fileUrl.pathname
   } catch (error) {
     errorMessage.value =
       error instanceof Error ? error.message : '无法打开该曲谱。'
@@ -63,7 +82,7 @@ onMounted(() => {
       <iframe
         v-if="filePath"
         class="pdf-frame"
-        :src="`${filePath}#view=FitH`"
+        :src="filePath"
         :title="`${fileTitle} PDF 预览`"
       ></iframe>
 
