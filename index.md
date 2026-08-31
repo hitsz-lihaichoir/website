@@ -8,16 +8,19 @@ hero:
   actions:
     - theme: brand
       text: 📥 进入曲谱库
-      link: /music/lihai
-    - theme: alt
-      text: 📢 近期活动通知
-      link: /events/
+      link: /music/
 
 features:
-  - title: 📥 极速资源下载
-    details: 告别卡顿的在线预览，一键下载高清完整版 PDF 曲谱，随时随地导入平板中的 Notability 或 Goodnotes 进行标记排练。
-  - title: 🎧 分轨排练音频
-    details: 提供 S、A、T、B 各声部独立的排练 MP3 示范音轨下载，戴上耳机，随时随地进行针对性视唱练习。
-  - title: 🏛️ 极简纯粹
-    details: 专为合唱排练场景打造的极简界面，无冗余跳转，直达下载，让每一次排练准备都高效无阻。
+  - title: 🎵 本学期现用曲目
+    details: 《爱永在》完整曲谱已经上线，可在线查看或下载 PDF，方便导入平板进行排练标注。
+    link: /music/aiyongzai
+    linkText: 查看《爱永在》
+  - title: 📥 曲谱集中下载
+    details: 曲谱资源统一收录在在线曲谱库中，支持浏览器预览及 PDF 下载。
+    link: /music/
+    linkText: 进入曲谱库
+  - title: 🎤 新学期招新
+    details: 招新专区正在筹备，将用于发布招新安排、报名入口、招募方向与常见问题。
+    link: /recruitment/
+    linkText: 查看筹备进度
 ---

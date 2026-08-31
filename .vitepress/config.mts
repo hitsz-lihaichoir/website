@@ -8,11 +8,11 @@ export default defineConfig({
   lang: 'zh-CN',
   
   themeConfig: {
-    // 顶部导航栏：精准定位三大核心功能
+    // 顶部导航栏：活动通知暂时隐藏，保留文件以便后续恢复
     nav: [
       { text: '首页', link: '/' },
       { text: '🎼 在线曲谱库', link: '/music/' },
-      { text: '📢 活动通知', link: '/events/' },
+      { text: '🎤 招新专区', link: '/recruitment/' },
       { text: '🏛️ 乐团架构', link: '/about/' }
     ],
 
@@ -22,17 +22,9 @@ export default defineConfig({
         {
           text: '🎶 曲谱资源库',
           items: [
+            { text: '爱永在（本学期）', link: '/music/aiyongzai' },
             { text: '荔海 (团歌)', link: '/music/lihai' }
             // 以后添加新歌，直接在这里加一行，例如：{ text: '茉莉花', link: '/music/molihua' }
-          ]
-        }
-      ],
-      '/events/': [
-        {
-          text: '大型活动',
-          items: [
-            { text: '近期通知', link: '/events/' },
-            { text: '历史演出', link: '/events/history' }
           ]
         }
       ]

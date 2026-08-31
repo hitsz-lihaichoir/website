@@ -17,7 +17,11 @@
         <td>荔海_完整曲谱</td>
         <td>PDF</td>
         <td>-</td>
-        <td><a href="/website/pdfs/荔海.pdf" download class="hoa-dl">📥 点击下载</a></td>
+        <td>
+          <a href="/website/preview/?file=%2Fwebsite%2Fpdfs%2F%E8%8D%94%E6%B5%B7.pdf" target="_blank" class="hoa-dl">👀 在线预览</a>
+          ·
+          <a href="/website/pdfs/荔海.pdf" download class="hoa-dl">📥 下载曲谱</a>
+        </td>
       </tr>
       <tr>
         <td>荔海_男低音轨 (Bass)</td>
